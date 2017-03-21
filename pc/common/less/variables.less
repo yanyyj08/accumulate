@@ -1,0 +1,84 @@
+
+// 底层变量，常量汇总 -----------------------------------------------------------------------------
+
+@base-width: 1100px;
+
+@body-bg: #F1F1F1;			    // body background
+@color-base: #ff9125;		    // 整站主要基本色
+@color-blue-ord: #4c8de7;       // 网站主要蓝色
+
+@color-black-dark: #333;	    // 黑色深色
+@color-black-ord: #666;		    // 黑色普通
+@color-black-light: #999;	    // 黑色浅色
+
+@color-list-bg: #efefef;        // 列表的灰色背景
+@color-list-border: #e1e1e1;    // 列表border
+@color-border: #eaeaea;         // 列表之外的其他灰色border
+@color-list-unable: #b3b3b3;    // 列表按钮无法点击状态背景颜色
+
+@color-black-line: #e7e7e7;     // 浅黑色边线
+
+
+@color-blue: #5da1ec;		    // 蓝色 标题 title , 蓝色按钮背景
+@color-blue-light: #cbe0f9;     // 蓝色进度条浅蓝色背景
+@color-orange: #ff6131;		    // 价格颜色 提示错误颜色
+@color-orange-dark: #ff6131;	// 深一点的价格颜色
+
+@color-sp-a: #eb811a;		    // button 悬停
+@color-sp-b: #fd8643;		    // 按钮2
+
+@color-sp-c: #CFCFCF;		    // 黑色背景下的 <a>标签颜色
+
+@color-sp-d: #D0D0D0;		    // footer 字体颜色
+
+
+// 底层 主框架样式调用 -----------------------------------------------------------------------------
+
+.fst-main { display: block; width: 100%; overflow: hidden; } // 外层100%宽度
+.sec-main { position: relative; display: block; width: @base-width; margin: 0px auto; overflow: hidden; } // 中间标准宽度 居中
+
+.wrappers { box-sizing: border-box; margin: 30px auto; padding: 36px 18px; width: 1100px; background-color: #fff; }  //白底框，多用于pages
+
+.clearfix:after { clear:both; content:"."; display:block; height:0; visibility:hidden; }
+.clearfix { display:inline-block; }
+* html .clearfix { height:1%; }
+.clearfix { display:block; }
+
+// overlay
+.overlay,
+.overlayNocover { position: fixed; z-index: 1000; top: 0; left: 0; display: none; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .3); }
+
+// 常用的box-shadow
+.box-shadow { box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);}
+
+// 灰色底橙色出现的长条
+.topic-sty01 { position: relative; box-sizing: border-box; padding-left: 47px; width: 100%; height: 42px; line-height: 42px; color: #111; font-size: 16px; background-color: @color-list-bg;
+	> em, i { position: absolute; top: 11px; left: 27px; width: 4px; height: 20px; background-color: @color-base; }
+}
+
+// 数字加斜杠组合 如 1/
+// <div>
+//     <div><em>1</em><i></i></div>
+//     <h4>这里是文字</h4>
+// </div>
+.num-group-sty01 { position: relative;
+	> div {
+		> em { color: @color-base; font-size: 16px; font-style: italic; }
+		> i { position: absolute; display: block; margin-top: -6px; margin-left: -4px; width: 40px; height: 1px; background-color: @color-base; -webkit-transform:rotate(-45deg); -moz-transform:rotate(-45deg); -o-transform:rotate(-45deg); transform:rotate(-45deg); }
+	}
+	> h4 { padding-left: 20px; margin-top: -8px; color: #111; font-size: 14px; }
+}
+
+// 超出宽度省略号
+.ellipsis { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+
+// 项目正在审核中
+.no-pro-style { background: url("../z-img/noProSty02-bg.png") center no-repeat; background-size: contain; }
+
+// 不响应鼠标事件
+.no-mouse { pointer-events: none; }
+
+
+
+

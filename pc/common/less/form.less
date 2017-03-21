@@ -1,0 +1,117 @@
+
+// form表单样式汇总 --------------------------------------------------
+
+.list-sty01 { width: 100%;
+    > table { width: 100%; white-space: nowrap;
+    	tr { height: 48px; vertical-align: middle; border-bottom: 1px solid @color-list-border;
+    		td, th { position: relative; padding-left: 24px; }
+    	}
+    	> thead { background-color: @color-list-bg;
+    		tr { border-top: 1px solid @color-list-border; }
+    		th { position: relative; color: #111; }
+    	}
+    	> tbody { color: @color-black-ord;
+    		a { color: @color-black-ord; }
+    	}
+    }
+}
+
+// 登录注册提交form样式 --
+
+.list-sty02 { 
+    > span { position: relative; z-index: 1; width: 100%; height: 62px; display: inline-block; 
+        > input,
+        > label { position: absolute; left: 0px; bottom: 0px; width: 100%; height: 40px; line-height: 40px; box-sizing: border-box; background: transparent; }
+        > input { display: block; border: none; -webkit-appearance: none; padding: 0px 10px; font-size: 16px; color: @color-black-ord; }
+        > label { border-bottom: 1px solid @color-black-line; pointer-events: none; .animate-sty01;
+            > span { position: absolute; left: 10px; top: 0px; height: 40px; line-height: 40px; font-size: 16px; color: #aaa; .animate-sty01; }
+        }
+
+        > samp { }
+    }
+    > span.inputFilled { 
+        > label { border-bottom-color: @color-base*1.2; 
+            > span { left: 5px; top: -14px; height: 14px; line-height: 14px; font-size: 12px; }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 债权详情页面，价格加减器，之后修改成普通input样式
+.addition-ipt { position: relative; width: 276px; height: 40px; line-height: 40px;
+    > i { position: absolute; top: 0; right: 0; display: block; width: 40px; height: 40px; line-height: 40px; color: @color-base; font-size: 22px; text-align: center; background-color: @color-border;
+        &:first-child { top: 0; left: 0; }
+        &.unable { color: @color-black-dark; }
+        &:hover { cursor: pointer; }
+    }
+    > input { position: absolute; top: 0; left: 48px; box-sizing: border-box; padding-left: 8px; width: 180px; height: 40px; border: 1px solid @color-border;}
+}
+
+
+// input 文字
+
+
+
+// input 边框
+
+
+// input 阴影
+
+
+
+//input focus 阴影效果
+
+
+
+// input 边框颜色
+
+
+// select
+
+
+
+select { appearance:none; -moz-appearance:none; -webkit-appearance:none; position: absolute; padding: 0 8px; width: 180px; height: 30px; color: #111; font-size: 14px; border: solid 1px @color-list-border; border-radius: 0; background: url("../images/icon-select-down.png") no-repeat scroll right center transparent;}
+select::-ms-expand { display: none; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

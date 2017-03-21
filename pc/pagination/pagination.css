@@ -1,0 +1,66 @@
+.page_num {
+  text-align: center;
+}
+.page_num a {
+  display: inline-block;
+  margin-left: 4px;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  line-height: 36px;
+  color: #333333;
+  font-size: 16px;
+  background-color: #fff;
+  border-radius: 3px;
+}
+.page_num a:hover,
+.page_num a.page {
+  color: #fff;
+  background-color: #428bca;
+}
+.page_num a.arr1 {
+  font-family: "楷体";
+  font-weight: bold;
+  font-size: 17px;
+}
+.tcdPageCode {
+  float: right;
+  display: inline-block;
+  padding: 15px 20px;
+  text-align: left;
+  color: #ccc;
+}
+.tcdPageCode > a {
+  color: #428bca;
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  margin: 0 2px;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+.tcdPageCode > a:hover {
+  text-decoration: none;
+  border: 1px solid #428bca;
+}
+.tcdPageCode > span {
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 10px;
+  margin: 0 2px;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+.tcdPageCode > span.current {
+  color: #fff;
+  background-color: #428bca;
+  border: 1px solid #428bca;
+}
+.tcdPageCode > span.disabled {
+  color: #bfbfbf;
+  background: #f2f2f2;
+  border: 1px solid #bfbfbf;
+}

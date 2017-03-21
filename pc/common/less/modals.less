@@ -1,0 +1,134 @@
+// modals 弹层组件 --------------------------------------------------
+.modal { position: fixed; z-index: 1000; background-color: #fff; .box-shadow; }
+
+.modal-sty01 { top: 50%; left: 50%; margin-top: -178px; margin-left: -278px; box-sizing: border-box; width: 556px; height: 356px;
+	.modal-header { position: relative; height: 46px; background-color: @color-base;
+		> h4 { padding-left: 15px; height: 46px; line-height: 46px; color: #fff; font-size: 16px; }
+	}
+
+	// 投资详情弹层样式
+	.modal-body { position: relative; height: 310px;
+		> div p { height: 36px; line-height: 36px; font-size: 14px;
+			&.ipt { height: 48px; line-height: 48px;
+				span { box-sizing: border-box; padding-left: 8px; width: 144px; height: 30px; line-height: 30px; border: 1px solid @color-border;
+					> input { width: 110px; }
+					> b { font-weight: normal; }
+				}
+			}
+			&.tip { height: 14px; line-height: 14px; }
+			> i { color: @color-orange; font-size: 12px; }
+			> em { display: inline-block; margin-right: 10px; width: 100px; color: @color-black-ord; text-align: right; }
+			> span { display: inline-block; color: @color-black-dark; }
+		}
+		.left { position: absolute; top: 0; left: 0; box-sizing: border-box; padding-top: 20px; width: 263px; height: 100%; background-color: #ebf0f5; }
+		.right { position: absolute; top: 0; right: 0; box-sizing: border-box; padding-top: 20px; width: 293px; height: 100%;
+			.button-sty03 { margin-left: 110px; width: 145px; height: 30px; line-height: 30px; }
+		}
+		.content { position: relative; padding: 20px 75px; background-color: #fff;
+			b { font-weight: normal; }
+		}
+	}
+
+	.modal-footer { position: absolute; bottom: 0; padding: 15px 0; width: 100%; height: 34px; border-top: 1px solid #ddd;
+        .btn { float: right; box-sizing: border-box; margin-right: 12px; padding: 0; width: 84px; height: 34px; line-height: 34px; text-align: center; border-radius: 4px;
+            &.btn-sty01 { color: #4c8de7; border: 1px solid #4c8de7; background: #fff; }
+            &.btn-sty02 { color: #fff; background: #ff9125; }
+        }
+	}
+
+	&.modal-sm { margin-top: -100px; height: 200px;
+		.modal-body { height: 100px; font-size: 14px;
+			h5 { font-size: 16px; line-height: 30px; }
+		}
+	}
+
+	// 保利钱包弹层样式
+
+	> div.modal-body-wallet { width: 400px; height: 314px; 
+		> form { position: relative; display: block; width: 280px; height: 248px; margin: 40px 53px; overflow: hidden; 
+			> div,> a { position: absolute;}
+			> div { left: 0px; bottom: 22px; display: block; width: 280px; height: 40px; }
+			> a { right: 0px; bottom: 0px; display: inline-block; color: @color-blue; }
+			> em,> span,> samp { display: block; width: 100%; overflow: hidden; }
+			> em { font-size: 14px; color: @color-black-ord; height: 32px; line-height: 32px; margin-bottom: 5px;
+				> i { display: inline-block; color: @color-orange; font-size: 20px; font-family: Arial; margin-left: 12px; margin-right: 3px; }
+				> a { float: right; display: inline-block; height: 32px; line-height: 32px; font-size: 14px; color: @color-blue; 
+					> span { float: left; display: block; width: 32px; height: 32px; background: url("../z-img/money-bg.jpg") center no-repeat; }
+				}
+			}
+			> span { position: relative; box-sizing: border-box; height: 40px; line-height: 40px; border: 1px solid @color-border; 
+				> input,> em { position: absolute; }
+				> em { right: 14px; top: 0px; display: inline-block; height: 40px; line-height: 40px; font-size: 14px; }
+				> input { left: 12px; top: 50%; margin-top: -16px; display: block; width: 210px; height: 32px; line-height: 32px; border: none; }
+			}
+			> samp { display: block; min-height: 24px;
+				> span.s01 { height: 24px; line-height: 24px; font-size: 12px; color: @color-orange; overflow: hidden;
+					> i { float: left; display: block; width: 14px; height: 23px; margin-right: 2px; background: url("../z-img/icon-borrow-err.png") center no-repeat; }
+				}
+				> span.s02 { display: block; margin: 4px 10px; color: @color-black-ord; 
+					> i { color: @color-orange; margin: 0px 2px; }
+				}
+
+			}
+		}
+	} 
+}
+
+.modal-sty02 { top: 50%; left: 50%; margin-top: -100px; margin-left: -166px; box-sizing: border-box; width: 332px; height: 200px;
+	.icon-modal-close { background: url("../images/icon-close.png") center no-repeat; }
+	.modal-header { margin: 40px auto 20px; width: 51px; height: 51px; background: url("../images/icon-transfer-success.png") center no-repeat;
+		&.fail { background: url("../images/icon-transfer-fail.png") center no-repeat; }
+		&.warn { background: url("../images/icon-transfer-warn.png") center no-repeat; }
+	}
+	> p { color: @color-black-dark; font-size: 16px; text-align: center; 
+		> i { font-family: Arial; color: red; margin: 0px 2px; font-weight: bold; }
+	}
+	> a { display: block; margin: 10px auto; }
+	> span { display: block; margin-top: 20px; width: 100%; height: 14px; line-height: 14px; text-align: center;
+		> a { color: @color-blue-ord; }
+		> i { color: @color-black-light; cursor: pointer; }
+	}
+}
+
+
+// 各种协议
+.modal-sty03 { top: 50%; left: 50%; margin-top: -300px; margin-left: -400px; box-sizing: border-box; width: 800px; height: 680px;
+	.modal-header { height: 50px;
+		> h4 { height: 50px; line-height: 80px; font-size: 16px; text-align: center; }
+	    .icon-modal-close { background: url("../images/icon-close.png") center no-repeat; }
+	}
+	.modal-body { margin-top: 10px; padding: 0 30px; height: 600px; overflow-y: scroll; overflow-x: hidden;
+		> p { line-height: 20px; color: @color-black-dark; }
+		> table { margin: 10px 0; line-height: 30px; width: 100%; color: @color-black-dark; text-align: center; white-space: nowrap; border: 1px solid @color-black-light; }
+	}
+}
+
+
+// 注册协议
+.modal-sty04 { top: 5%; left: 50%; margin-left: -400px; width: 800px; height: 90%; border-radius: 5px; padding: 20px; box-sizing: border-box;
+	> ul { overflow: hidden;
+		> div.modal-header { position: relative; border-bottom: 1px solid @color-black-line;
+			> h3,
+			> span { display: block; width: 100%; text-align: center; color: #fd4949; }
+			> h3 { font-size: 18px; height: 30px; line-height: 30px; }
+			> span { font-size: 24px; height: 60px; line-height: 50px; }
+			> i { position: absolute; right: 0px; top: 0px; display: block; width: 32px; height: 32px; background: url("../z-img/icon-sty-no.png") center no-repeat; background-size: 100% 100%; cursor: pointer; }
+		}
+		> div.modal-body { margin: 10px 0px; padding: 10px; box-sizing: border-box; overflow-y: scroll; overflow-x: hidden;
+			> ul { margin-bottom: 30px;
+				> li { line-height: 150%; font-size: 14px; color: @color-black-ord; margin-bottom: 5px; 
+					> h3 { font-size: 14px; font-weight: bold; }
+					> em { margin: 0px 14px; }
+					> span { float: right; color: red; }
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+

@@ -1,0 +1,101 @@
+
+// 网站底部复用 -----------------------------------------------------------------------------
+
+div.footer {
+
+	> div.fot01 { background: #DDD;
+		> ul { height: 190px; 
+			> div { position: absolute; color: @color-black-ord; }
+
+			> div.z01 { left: 40px; top: 24px; 
+				> ul { display: block; height: 46px;
+					> h3,
+					> a { float: left; height: 46px; line-height: 46px; }
+					> h3 { color: @color-black-dark; font-size: 18px; }
+					> a { color: @color-black-ord; font-size: 14px; margin-left: 50px; }
+					> a:hover { color: @color-base; }
+				}
+			}
+
+			> div.z02 { right: 350px; top: 50%; margin-top: -70px; display: block; width: 280px; height: 140px; border: 1px solid #BDBDBD; border-width: 0px 1px 0px 1px; 
+				> ul { margin: 0px 20px; overflow: hidden;
+
+					> li { display: block; width: 110px; height: 140px; 
+						> samp,
+						> span { display: block; width: 110px; }
+						> samp { height: 110px; background: #000; margin: 5px 0px 3px; }
+						> span { text-align: center; font-size: 14px; }
+					}
+					> li.weixin { float: left;
+						> samp { background: url("../z-img/weixin-bg.jpg") no-repeat; background-size: 100% 100%; }
+					}
+					> li.weibo { float: right; 
+						> samp { background: url("../z-img/weibo-bg.jpg") no-repeat; background-size: 100% 100%; }
+					}
+				}
+			}
+			> div.z03,
+			> div.z04,
+			> div.z05 { right: 0px; display: block; width: 300px; text-align: center; }
+			> div.z03 { top: 40px; font-size: 14px; }
+			> div.z04 { bottom: 72px; font-size: 34px; color: @color-black-dark; font-family: Arial; letter-spacing: 1px; }
+			> div.z05 { bottom: 36px; font-size: 14px; 
+				> span { font-family: Arial; font-weight: bold; color: #333; }
+			}
+		}
+	}
+
+	> div.fot02 { background: #555;
+		> ul { height: 180px;
+			> div { position: absolute; color: @color-sp-d; }
+			> div.z01 { left: 50%; margin-left: -340px; top: 30px;
+				> span,> a,> i { float: left; display: inline-block; height: 26px; line-height: 26px; color: @color-sp-d; font-size: 14px; }
+				> i { margin: 0px 11px; }
+				> a:hover { color: #FFF; }
+			}
+			> div.z02 { left: 0px; top: 78px; display: block; width: 100%; text-align: center;  
+				> i,> span,> a { display: inline-block; color: @color-sp-d; margin: 0px 3px; font-size: 12px; }
+				> i { font-family: Arial; }
+			}
+			> div.z03 { left: 50%; margin-left: -275px; bottom: 26px; height: 42px; overflow: hidden;
+				> a { display: block; float: left; width: 94px; height: 42px; background: url("../z-img/footer-z03-bg.png") no-repeat; margin-right: 20px; }
+				> a.fp01 { background-position: left 0px; }
+				> a.fp02 { background-position: left -42px; }
+				> a.fp03 { background-position: left -84px; }
+				> a.fp04 { background-position: left -126px; }
+				> a.fp05 { background-position: left bottom; }
+			}
+		}
+	}
+}
+
+
+// 右侧随屏 -----------------------------------------------------------------------------
+
+div.right-sild { position: fixed; left: 50%; margin-left: 570px; bottom: 92px; display: block; width: 42px; height: 184px; z-index: 2000;
+	> div { display: inline-block; float: left; margin-bottom: 4px; border-radius: 5px; background: #FA782F; cursor: pointer; .animate-sty01;
+		> ul { position: relative; display: block; width: 42px; height: 42px; background: url("../z-img/rightSild-bg.png") center no-repeat; .animate-sty01; }
+		> ul.rs01 { background-position: 0px 0px; }
+		> ul.rs02 { background-position: -42px 0px; 
+			> span { position: absolute; top: 0px; right: 42px; display: block; opacity: 0; width: 0px; text-align: center; height: 42px; line-height: 42px; background: #F88A4D; color: #FFF; font-size: 16px; .animate-sty01; }
+		}
+		> ul.rs03 { background-position: -84px 0px; 
+			> samp { position: absolute; top: -40px; right: 42px; display: block; opacity: 0; width: 0px; height: 180px; background: url("../z-img/right_weixin.jpg") center no-repeat; .animate-sty01; }
+		}
+		> ul.rs04 { background-position: -126px 0px; }
+	}
+
+	> div:hover { background: #F88A4D; 
+		> ul.rs01 { background-position: 0px -42px; }
+		> ul.rs02 { background-position: -42px -42px; 
+			> span { right: 50px; width: 170px; height: 42px; opacity: 1; }
+		}
+		> ul.rs03 { background-position: -84px -42px; 
+			> samp { right: 50px; width: 140px; height: 180px; opacity: 1; }
+		}
+		> ul.rs04 { background-position: -126px -42px; }
+	}
+}
+
+a#scroll-up { left: 50%; margin-left: 570px; bottom: 50px; display: block; width: 42px; height: 42px; background: url("../z-img/rightSild-bg2.png") -168px 0px no-repeat; border-radius: 5px; }
+a#scroll-up:hover { background: url("../z-img/rightSild-bg2.png") -168px -42px no-repeat; }

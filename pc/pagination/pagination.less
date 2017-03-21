@@ -1,0 +1,19 @@
+// 翻页组件 -----------------------------------------------------------------------------
+@color-base: #428bca;
+@color-font: #333;
+.page_num { text-align: center;
+    a { display: inline-block; margin-left: 4px; width: 36px; height: 36px; text-align: center; line-height: 36px; color: @color-font; font-size: 16px; background-color: #fff; border-radius: 3px;
+    	&:hover, &.page { color: #fff; background-color: @color-base; }
+    	&.arr1 { font-family: "楷体"; font-weight: bold; font-size: 17px; }
+    }
+}
+
+// 分页样式
+.tcdPageCode{ float: right; display: inline-block; padding: 15px 20px; text-align: left; color: #ccc; 
+	> a { display: inline-block; color: @color-base; display: inline-block; height: 25px; line-height: 25px; padding: 0 10px; border: 1px solid #ddd;	margin: 0 2px; border-radius: 4px; vertical-align: middle; }
+	> a:hover { text-decoration: none; border: 1px solid @color-base; }
+	> span { display: inline-block; height: 25px; line-height: 25px; padding: 0 10px; margin: 0 2px; border-radius: 4px; vertical-align: middle; 
+		&.current { color: #fff; background-color: @color-base; border: 1px solid @color-base; }
+		&.disabled { color: #bfbfbf; background: #f2f2f2; border: 1px solid #bfbfbf; }
+	}
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="touchSlider.css">
+    <script src="jquery-2.2.1.js"></script>
+    <script src="jquery.touchSlider.js"></script>
+    <title>touchSlider</title>
+</head>
+
+<body>
+    <div></div>
+    <div class="carousel" id="carousel">
+        <div class="carousel-main" id="carouselMain">
+            <ul>
+                <li>
+                    <a href="javascript:;">
+                        <img src="img/temporary-slider.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="img/temporary-slider.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="img/temporary-slider.png" alt="">
+                    </a>
+                </li>
+            </ul>
+            <a href="javascript:;" id="btnPrev"></a>
+            <a href="javascript:;" id="btnNext"></a>
+        </div>
+        <div class="carousel-icon clearfix" id="carouselIcon">
+            <a class="current" href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+        </div>
+    </div>
+    <script>
+    var toDefaultSlider = function() {
+        $dragBln = false;
+        $('#carouselMain').touchSlider({
+            flexible: true,
+            speed: 200,
+            btn_prev: $('#btnPrev'),
+            btn_next: $('#btnNext'),
+            paging: $('#carouselIcon' + ' a'),
+            counter: function(e) {
+                $('#carouselIcon' + ' a').removeClass('current').eq(e.current - 1).addClass('current');
+            }
+        });
+        $('#carouselMain').bind('mousedown', function() {
+            $dragBln = false;
+        })
+        $('#carouselMain').bind('dragstart', function() {
+            $dragBln = true;
+        })
+        $('#carouselMain a').click(function() {
+            if ($dragBln) {
+                return false;
+            }
+        })
+        timer = setInterval(function() {
+            $('#btnNext').click();
+        }, 3000);
+        $('#carouselMain').hover(function() {
+            clearInterval(timer);
+        })
+        $('#carouselMain').bind('touchstart', function() {
+            clearInterval(timer);
+        }).bind('touchend', function() {
+            timer = setInterval(function() {
+                $('#btnNext').click();
+            }, 3000);
+        });
+    };
+    $(function() {
+        toDefaultSlider();
+    });
+    </script>
+</body>
+
+</html>

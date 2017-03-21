@@ -1,0 +1,38 @@
+/* 轮播 */
+.carousel {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  height: 150px;
+  max-width: 720px;
+}
+.carousel .carousel-main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+.carousel .carousel-main ul,
+.carousel .carousel-main li,
+.carousel .carousel-main img,
+.carousel .carousel-main > ul > li > a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.carousel .carousel-icon {
+  position: absolute;
+  bottom: 4px;
+  right: 10px;
+}
+.carousel .carousel-icon > a {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.carousel .carousel-icon > a.current {
+  background-color: #666666;
+}

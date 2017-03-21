@@ -1,0 +1,17 @@
+
+// hover后出现标签 -----------------------------------------------------------------------------
+
+div.tips { position: absolute; cursor: pointer;
+	> ul { position: relative; padding: 0px 8px; height: 22px; line-height: 22px; font-size: 12px; background: #489B3F; color: #FFF; border-radius: 4px;
+		> i,> em { position: absolute; display: none; }
+		> em { padding: 4px 8px; min-width: 90px; left: 0px; top: 34px; background: #fffcef; border: 1px solid #ffbb76; box-shadow: 0 0 3px rgba(243, 120, 0, 0.4); color: #db7c22; }
+		> i { left: ; top: 27px; width: 17px; height: 8px; background: url("../z-img/1ucjDOnsb8.png"); }
+	}
+
+}
+
+div.tips:hover { 
+	> ul {
+		> i,> em { display: block; }
+	}
+}

@@ -1,0 +1,52 @@
+
+// 网站头部复用 -----------------------------------------------------------------------------
+div.header { height: 114px;
+
+	> div.top { background: #555;
+		> ul { height: 40px; 
+			> span,
+			> div { display: inline-block; }
+			> span { float: left; height: 40px; line-height: 40px; color: @color-sp-c; font-size: 14px;
+				> i { float: left; display: block; width: 40px; height: 40px; }
+				> em { font-family: Arial; margin: 0px 4px; font-weight: bold; }
+			}
+			> div { float: right; margin-right: 4px;
+				> a,
+				> em { float: left; display: block; height: 40px; color: @color-sp-c; }
+				> a { line-height: 40px; 
+					> span { color: #FFF; font-family: Arial; font-size: 14px; font-weight: bold; margin: 0px 10px; }
+					> i { float: left; display: inline-block; width: 40px; height: 40px; }
+				}
+				> em { line-height: 38px; margin: 0px 14px; }
+			}
+		}
+	}
+
+	> div.nav { background: #FFF; 
+		> ul { height: 74px;
+			> a,
+			> div { position: absolute; top: 50%; }
+			> a { left: 6px; margin-top: -30px; display: block; width: 272px; height: 60px; background: url("../z-img/logo-bg.jpg") center no-repeat; }
+			> div { right: 0px; margin-top: -16px;
+				> a { display: inline-block; font-size: 16px; padding: 0px 6px; margin-left: 40px; height: 32px; line-height: 32px; color: @color-black-dark; border: 2px #FFF solid; border-width: 0px 0px 2px 0px; }
+				> a.xz { color: @color-base; border-bottom-color: @color-base; }
+			}
+		}
+	}
+
+}
+
+
+// css sprite 主要代码调用 -----------------------------------------------------------------------------
+.ic { background: url("../z-img/index-main-bg.png") no-repeat; }
+.i-01 { background-position: 0px 0px; }
+.i-02 { background-position: -40px 0px; }
+.i-03 { background-position: 0px bottom; }
+.i-04 { background-position: -41px bottom; }
+.i-05 { background-position: -82px bottom; }
+.i-06 { background-position: -123px bottom; }
+.i-11 { background-position: 0px -40px; }
+.i-12 { background-position: -40px -40px; }
+.i-13 { background-position: -80px -40px; }
+.i-14 { background-position: -120px -40px; }
+.i-15 { background-position: right bottom; }

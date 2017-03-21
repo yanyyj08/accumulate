@@ -1,0 +1,46 @@
+// 网站表格样式 -----------------------------------------------------------------------------
+
+.table-sty01 {  width: 100%; font-size: 14px; color: @color-black-ord;
+    tr { height: 50px; vertical-align: middle; white-space: nowrap;
+    	td, th { text-align: center;}
+    }
+    > thead {
+    	> tr { background-color: @color-list-bg; }
+    }
+    > tbody {
+    	> tr {
+	   		&:nth-child(even) { background-color: @color-list-bg; }
+	   	}
+    }
+}
+
+.table-sty02 {
+    tr { line-height: 25px; vertical-align: middle; height: 40px;
+        > td {  width: 770px; padding: 0 50px; font-size: 14px; color: @color-black-ord;
+            &:first-child { padding: 0; padding-right: 36px; width: 124px; color: @color-black-light; text-align: right; border-right: 4px solid #fff; }
+            div { width: 770px; line-height: 25px; border-top: 2px solid #f7fafe; color: @color-black-ord;
+                span { font-size: 14px; }
+                &:first-child { border: none; }
+            }
+        }
+        &:nth-child(odd) { background-color: #f7fafe;
+            div { width: 770px; border-top: 2px solid #fff;
+                &:first-child { border: none; }
+            }
+        }
+    }
+}
+
+.table-sty03 {  width: 100%; font-size: 14px; color: @color-black-ord;
+    tr { height: 50px; vertical-align: middle; white-space: nowrap;
+        td, th { text-align: center;}
+    }
+    > thead {
+        > tr { background-color: @color-list-bg; }
+    }
+    > tbody {
+        > tr {
+            &:nth-child(even) { background-color: @color-list-bg; }
+        }
+    }
+}
